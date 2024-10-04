@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/store/order")
 public class ShopController {
 
+    @GetMapping(path = "/")
+    public String home() {
+        return "onlineshop";
+    }
     @GetMapping(path = "/add")
     public String addID() {
         return "Обращаемся к методу add из браузера, добавляем первые ID.";
