@@ -17,7 +17,7 @@ public class ShopController {
 
     @GetMapping(path = "/")
     public String home() {
-        return "onlineshop";
+        return "onlineshop is ready";
     }
 
     @GetMapping(path = "/add")
@@ -26,7 +26,7 @@ public class ShopController {
     }
 
     @GetMapping(path = "/get")
-    public String getByID() {
-        return shopCartService.getID(1);
+    public String getByID(@RequestParam("id") Integer ... ids) {
+        return shopCartService.getID(ids);
     }
 }
