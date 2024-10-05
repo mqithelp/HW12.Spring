@@ -21,12 +21,13 @@ public class ShopController {
     }
 
     @GetMapping(path = "/add")
-    public String addID(@RequestParam("id") Integer ... ids) {
+    public String addID(@RequestParam("id") Integer... ids) {
+
         return shopCartService.addID(ids);
     }
 
     @GetMapping(path = "/get")
-    public String getByID(@RequestParam("id") Integer ... ids) {
-        return shopCartService.getID(ids);
+    public String getByID() {
+        return shopCartService.getID();
     }
 }
